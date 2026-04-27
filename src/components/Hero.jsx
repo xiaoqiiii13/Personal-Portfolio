@@ -10,29 +10,29 @@ const Hero = () => {
       <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-[#EBD8C3] blur-[100px] opacity-25 -z-10 rounded-full animate-pulse" />
       <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#AFC3D9] blur-[100px] opacity-20 -z-10 rounded-full" />
 
-      <div className="container-custom flex flex-col md:flex-row items-center gap-12 md:gap-24">
-        <div className="flex-[1.2] space-y-8 text-center md:text-left">
+      <div className="container-custom flex flex-col md:flex-row items-center gap-10 md:gap-24 relative z-10">
+        <div className="flex-[1.2] space-y-8 md:space-y-10 text-center md:text-left">
           <div className="space-y-4">
-            <h1 className="text-6xl md:text-[6.5rem] portfolio-title">
+            <h1 className="text-5xl md:text-[6.5rem] portfolio-title">
               孟小琪
             </h1>
             <h2 className="text-xl md:text-2xl font-medium text-[#7E8FB5] tracking-[0.2em] uppercase">
               AI Content & Digital Media
             </h2>
-            <p className="text-lg md:text-xl text-[#8C867F] max-w-xl leading-relaxed mx-auto md:mx-0">
+            <p className="text-base md:text-xl text-[#8C867F] max-w-xl leading-relaxed mx-auto md:mx-0">
               专注于将 AI 技术转化为高质量的视觉叙事与数字内容体验。通过“AI 提效 + 人工审美”重塑未来媒体工作流。
             </p>
           </div>
           
-          <div className="flex flex-wrap justify-center md:justify-start gap-3">
+          <div className="flex flex-wrap justify-center md:justify-start gap-2 md:gap-3">
             {tags.map((tag, index) => (
-              <span key={index} className="px-4 py-2 border border-[#E8E5E0] bg-white/50 backdrop-blur-sm rounded-full text-xs font-bold text-[#8C867F] tracking-widest uppercase">
+              <span key={index} className="px-3 py-1.5 md:px-4 md:py-2 border border-[#E8E5E0] bg-white/50 backdrop-blur-sm rounded-full text-[10px] md:text-xs font-bold text-[#8C867F] tracking-widest uppercase">
                 {tag}
               </span>
             ))}
           </div>
 
-          <div className="flex justify-center md:justify-start gap-5 pt-4">
+          <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-4">
             <a href="#projects" className="btn-primary flex items-center gap-2 group">
               精选作品 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
