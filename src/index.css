@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --bg-main: #FAF9F7;
+  --bg-card: #FFFFFF;
+  --bg-secondary: #F3F1ED;
+  --text-main: #2D3436;
+  --text-muted: #636E72;
+  --accent-blue: #7E8FB5;
+  --accent-purple: #8E79D6;
+  --accent-green: #5F6F94;
+  --border-light: #E8E5E0;
+  --soft-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04);
+  --hover-shadow: 0 20px 40px -15px rgba(126, 143, 181, 0.1);
+}
+
+@layer base {
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Inter', "SF Pro Display", "PingFang SC", "Heiti SC", "Microsoft YaHei", sans-serif;
+    @apply antialiased text-[16px] leading-[1.75];
+  }
+
+  p {
+    @apply tracking-wide;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-[1100px] mx-auto px-6;
+  }
+  
+  .section-spacing {
+    @apply py-20 md:py-32;
+  }
+  
+  .glass-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    @apply rounded-[2rem] transition-all duration-500 shadow-sm;
+  }
+  
+  .glass-card:hover {
+    box-shadow: var(--hover-shadow);
+    @apply -translate-y-1;
+  }
+
+  .portfolio-title {
+    @apply font-bold tracking-tight text-slate-900 leading-[1.15];
+  }
+  
+  .tag-soft {
+    @apply px-4 py-1.5 rounded-full text-sm font-medium transition-colors;
+    background-color: #F0EEEA;
+    color: #8C867F;
+  }
+
+  .btn-primary {
+    @apply px-8 py-3.5 bg-[#7E8FB5] text-white rounded-2xl font-semibold hover:bg-[#6c7ca3] transition-all duration-300 shadow-lg shadow-blue-900/5 text-center;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3.5 bg-white border border-[#E8E5E0] text-[#2D3436] rounded-2xl font-semibold hover:bg-[#F8F7F4] transition-all duration-300 text-center;
+  }
+}
+
