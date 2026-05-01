@@ -13,7 +13,7 @@ const ProjectCard = ({ project, index }) => {
             <Layers size={48} strokeWidth={1} />
           </div>
         )}
-        <div className="absolute top-4 left-4 md:bottom-6 md:left-6 px-3 py-1.5 md:px-4 md:py-2 bg-black/60 md:backdrop-blur-md rounded-lg md:rounded-xl text-[9px] md:text-[10px] font-bold text-white uppercase tracking-[0.2em] shadow-sm">
+        <div className="absolute top-4 left-4 px-3 py-1.5 bg-black/60 backdrop-blur-md rounded-lg text-[10px] md:text-xs font-bold text-white uppercase tracking-[0.2em] shadow-lg z-10 border border-white/10">
           {project.category.split(' / ')[0]}
         </div>
       </div>
